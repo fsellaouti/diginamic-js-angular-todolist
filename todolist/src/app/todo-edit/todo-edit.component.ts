@@ -17,10 +17,9 @@ export class TodoEditComponent implements OnInit {
 
 	ngOnInit() {
 		let id = this.activatedRoute.snapshot.paramMap.get('id');
-		console.log(id);
 		if (id==null) {
 			this.todo= new Todo(0, "");
-		} 
+		}
 		else {
 			this.todo= this.todoListService.get(Number(id)); 
 		}
@@ -33,6 +32,7 @@ export class TodoEditComponent implements OnInit {
 		}
 		else{
 			this.todoListService.edit(this.todo);
-		}    
+		}
+		this.router.navigate(['/list']);
 	}
 }

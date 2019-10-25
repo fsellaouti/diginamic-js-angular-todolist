@@ -1,9 +1,6 @@
 export class Todo {
 
-	public id : number;
-	public label : string;
-
-	constructor(id:number, label:string) {
+	constructor(public id:number, public label:string) {
 		
 	}
 }

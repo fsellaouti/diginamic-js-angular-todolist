@@ -7,8 +7,8 @@
 </div>
 
 <div class="container">
-    <form #todoForm="ngForm"> <!-- Gérer ici l'appel à la méthode addTodo() à la soumission du formulaire -->
-        <input type="hidden" name="idInput" id="idInput"> <!-- Lier ce champ à la propriété id de la tâche -->
+    <form (ngSubmit)="addTodo()" #todoForm="ngForm"> <!-- Gérer ici l'appel à la méthode addTodo() à la soumission du formulaire -->
+        <input type="hidden" name="idInput" id="idInput" [(ngModel)]="todo.id"> <!-- Lier ce champ à la propriété id de la tâche -->
         <div class="form-group">
             <label for="labelInput">Label</label>
             <input type="text" class="form-control" name="labelInput" id="labelInput"
@@ -18,6 +18,6 @@
             </div>
         </div>
         <button type="submit" class="btn btn-primary"
-            [disabled]="todoForm.invalid">{{ todo.id == null ? "Ajouter" : "Modifier" }}</button>
+            [disabled]="todoForm.invalid">{{ todo.id == null? "Ajouter" : "Modifier" }}</button>
     </form>
 </div>
