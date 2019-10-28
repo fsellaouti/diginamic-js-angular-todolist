@@ -33,6 +33,6 @@ export class TodoEditComponent implements OnInit {
 		else{
 			this.todoListService.edit(this.todo);
 		}
-		this.router.navigate(['/list']);
+		this.router.navigate(['list']);
 	}
 }
