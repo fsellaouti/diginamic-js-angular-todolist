@@ -40,7 +40,7 @@ export class TodoListService {
 	}
 
 	delete(id : number) {
-		this.todolist = this.todolist.splice(this.todolist.indexOf(this.get(id)), 1);
+		this.todolist = this.todolist.filter(t => t.id != id);
 	}
 
 }

@@ -19,9 +19,9 @@
             <td>{{todos.label}}<!-- Afficher ici le label de la tâche --></td>
             <td>
                 <!-- Gérer l'événement clic sur ce bouton afin de rediriger vers l'édition -->
-                <button type="button" class="btn btn-outline-warning mr-2" (click)="goToEdit(id)">Modifier</button>
+                <button type="button" class="btn btn-outline-warning mr-2" (click)="goToEdit(todos.id)">Modifier</button>
                 <!-- Gérer l'événement clic sur ce bouton afin de supprimer la tâche -->
-                <button type="button" class="btn btn-outline-danger" (click)="deleteTodo(id)">Supprimer</button>
+                <button type="button" class="btn btn-outline-danger" (click)="deleteTodo(todos.id)">Supprimer</button>
             </td>
         </tr>
     </tbody>
